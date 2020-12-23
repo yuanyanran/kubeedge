@@ -262,7 +262,7 @@ type VisitorConfigBluetooth struct {
 	DataWriteToBluetooth map[string][]byte `json:"dataWrite,omitempty"`
 	// Responsible for converting the data being read from the bluetooth device into a form that is understandable by the platform
 	//+optional
-	BluetoothDataConverter BluetoothReadConverter `json:"dataConverter,omitempty"`
+	BluetoothDataConverter *BluetoothReadConverter `json:"dataConverter,omitempty"`
 }
 
 // Specifies the operations that may need to be performed to convert the data
