@@ -755,7 +755,9 @@ func (in *VisitorConfigBluetooth) DeepCopyInto(out *VisitorConfigBluetooth) {
 			(*out)[key] = outVal
 		}
 	}
-	in.BluetoothDataConverter.DeepCopyInto(out.BluetoothDataConverter)
+	if in.BluetoothDataConverter != nil {
+		in.BluetoothDataConverter.DeepCopyInto(out.BluetoothDataConverter)
+	}
 	return
 }
 
